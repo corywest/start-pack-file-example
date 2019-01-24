@@ -42,10 +42,49 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _hello = __webpack_require__(1);
+
+	var _goodbye = __webpack_require__(2);
+
+	document.getElementById("HELLO-button").addEventListener("click", function () {
+	  (0, _hello.saySomething)();
+	});
+
+	document.getElementById("goodbye-button").addEventListener("click", function () {
+	  (0, _goodbye.sayGoodbye)();
+	});
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports) {
 
-	// This file is in the entry point in your webpack config.
 	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.sayingHello = sayingHello;
+	function sayingHello() {
+	  console.log("HELLO!!!!");
+	}
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.sayingGoodbye = sayingGoodbye;
+	function sayingGoodbye() {
+	  console.log("Goodbye!");
+	};
 
 /***/ })
 /******/ ]);
