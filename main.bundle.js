@@ -50,12 +50,24 @@
 
 	var _goodbye = __webpack_require__(2);
 
-	document.getElementById("HELLO-button").addEventListener("click", function () {
-	  (0, _hello.saySomething)();
+	var _classExample = __webpack_require__(3);
+
+	var _classExample2 = _interopRequireDefault(_classExample);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var example = new _classExample2.default();
+
+	document.getElementById("hello-button").addEventListener("click", function () {
+	  (0, _hello.sayingHello)();
 	});
 
 	document.getElementById("goodbye-button").addEventListener("click", function () {
-	  (0, _goodbye.sayGoodbye)();
+	  (0, _goodbye.sayingGoodbye)();
+	});
+
+	document.getElementById("class-example-button").addEventListener("click", function () {
+	  example.doClassThings();
 	});
 
 /***/ }),
@@ -85,6 +97,37 @@
 	function sayingGoodbye() {
 	  console.log("Goodbye!");
 	};
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var Example = function () {
+	  function Example() {
+	    _classCallCheck(this, Example);
+	  }
+
+	  _createClass(Example, [{
+	    key: "doClassThings",
+	    value: function doClassThings() {
+	      console.log("Doing JS class things!");
+	    }
+	  }]);
+
+	  return Example;
+	}();
+
+	exports.default = Example;
 
 /***/ })
 /******/ ]);
